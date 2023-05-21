@@ -1,6 +1,9 @@
 
 Hello world test for ESP32 and the LiquidCrystal dot-matrix display ( [HD44780U](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf) ).
 
+It auto detects the displays on I2C addresses {0x27, 0x3F}. The working address will be shown on the display.
+Display back-light will blink.
+
 It uses the esp-idf toolchain with Arduino component and [Arduino-LiquidCrystal-I2C-library](https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library).
 
 I followed [Arduino as an ESP-IDF component](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/esp-idf_component.html) guide.
@@ -22,6 +25,9 @@ cd lcd-hd44780-hello-world
 . $IDF_PATH/export.sh
 
 idf.py build
+
+idf.py -p /dev/tty.SLAB_USBtoUART flash
+
 ```
 
 

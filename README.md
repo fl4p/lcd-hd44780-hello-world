@@ -16,7 +16,7 @@ A shallow clone of the specific branch is much faster.
 
 # Building
 
-Make sure environment variable `$IDF_PATH` points to `esp-idf` path.
+Make sure environment variable `$IDF_PATH` points to `esp-idf` path (or replace `$IDF_PATH` in the shell command below).
 
 ```
 git clone --recursive https://github.com/fl4p/lcd-hd44780-hello-world

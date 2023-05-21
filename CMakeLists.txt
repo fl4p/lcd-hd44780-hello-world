@@ -2,7 +2,7 @@
 # CMakeLists in this exact order for cmake to work correctly
 cmake_minimum_required(VERSION 3.16)
 
-include_directories($ENV{IDF_PATH}/components/driver/include)
+# include_directories($ENV{IDF_PATH}/components/driver/include)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(lcd-hd44780-hello-world)

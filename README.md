@@ -13,7 +13,11 @@ I used esp-idf v5.1 and [arduino-esp32@idf-release/v5.1](https://github.com/espr
 Make sure environment variable `$IDF_PATH` points to `esp-idf` path.
 
 ```
+git clone --recursive https://github.com/fl4p/lcd-hd44780-hello-world
+git clone --depth 1 https://github.com/espressif/arduino-esp32 -b idf-release/v5.1 lcd-hd44780-hello-world/components/arduino
+cd lcd-hd44780-hello-world
 . $IDF_PATH/export.sh
+
 idf.py build
 ```
 

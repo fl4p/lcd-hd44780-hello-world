@@ -8,6 +8,9 @@ I followed [Arduino as an ESP-IDF component](https://espressif-docs.readthedocs-
 I used esp-idf v5.1 and [arduino-esp32@idf-release/v5.1](https://github.com/espressif/arduino-esp32/tree/idf-release/v5.1)
 (There are older version pairs of `esp-idf` and `arduino-esp32` that work)
 
+Because the `arduino-esp32` has ~2 GB of history and I want to refer to a non-default branch, I didn't use a git submodule here.
+A shallow clone of the specific branch is much faster.
+
 # Building
 
 Make sure environment variable `$IDF_PATH` points to `esp-idf` path.

@@ -2,7 +2,9 @@
 	path = components/Arduino-LiquidCrystal-I2C/Arduino-LiquidCrystal-I2C-library
 	url = https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library
 
+
 [submodule "components/arduino"]
 	path = components/arduino
 	url = https://github.com/espressif/arduino-esp32.git
 	branch = idf-release/v5.1
+	shallow = true

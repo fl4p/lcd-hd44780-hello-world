@@ -13,11 +13,15 @@ Download this repository
 git clone --recursive https://github.com/fl4p/lcd-hd44780-hello-world
 ```
 
-Then download the arduino component with the following command:
+Then download the arduino component with the following command **if you're using ESP-IDF 5.1**:
 ```
 git clone --depth 1 https://github.com/espressif/arduino-esp32 -b idf-release/v5.1 lcd-hd44780-hello-world/components/arduino
 ```
-This install `arduino-esp32` for esp-idf v5.1. Adjust the version in the command above if you use a different esp-idf version (`-b idf-release/v5.1`)
+
+If you are using ESP-IDF versions between 4.4.0 and 4.4.99, run the following command instead:
+```
+git clone --depth 1 https://github.com/espressif/arduino-esp32 lcd-hd44780-hello-world/components/arduino
+```
 
 You can now build & flash:
 ```

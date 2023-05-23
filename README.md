@@ -6,14 +6,6 @@ Display back-light will blink.
 
 It uses the esp-idf toolchain with Arduino component and [Arduino-LiquidCrystal-I2C-library](https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library).
 
-I followed [Arduino as an ESP-IDF component](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/esp-idf_component.html) guide.
-
-I used esp-idf v5.1 and [arduino-esp32@idf-release/v5.1](https://github.com/espressif/arduino-esp32/tree/idf-release/v5.1)
-(There are older version pairs of `esp-idf` and `arduino-esp32` that work)
-
-Because the `arduino-esp32` has ~2 GB of history and I want to refer to a non-default branch, I didn't use a git submodule here.
-A shallow clone of the specific branch is much faster. ([alternative approach using submodule](https://gist.github.com/kouk/3ba77edce12e95c1f779).)
-
 # Building
 
 Download this repository
@@ -71,6 +63,13 @@ configENABLE_BACKWARD_COMPATIBILITY=y
 Solution: Add esp_partition component `idf_component_register (... REQUIRES esp_partition)`. This might be bug in arduino-esp ?
 
 
+# Arduino as an esp-idf component
 
+I followed [Arduino as an ESP-IDF component](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/esp-idf_component.html) guide.
 
+I used esp-idf v5.1 and [arduino-esp32@idf-release/v5.1](https://github.com/espressif/arduino-esp32/tree/idf-release/v5.1)
+(There are older version pairs of `esp-idf` and `arduino-esp32` that work)
+
+Because the `arduino-esp32` has ~2 GB of history and I want to refer to a non-default branch, I didn't use a git submodule here.
+A shallow clone of the specific branch is much faster. ([alternative approach using submodule](https://gist.github.com/kouk/3ba77edce12e95c1f779).)
 

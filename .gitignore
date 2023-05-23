@@ -3,6 +3,6 @@ cmake-build-*
 build
 dependencies.lock
 
-managed_components/espressif__mdns/
+managed_components/*/
 
 sdkconfig.old

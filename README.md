@@ -16,18 +16,21 @@ A shallow clone of the specific branch is much faster. ([alternative approach us
 
 # Building
 
-Make sure environment variable `$IDF_PATH` points to `esp-idf` path (or replace `$IDF_PATH` in the shell command below).
-
+Download this repository
 ```
 git clone --recursive https://github.com/fl4p/lcd-hd44780-hello-world
+```
+
+Then download the arduino component with the following command:
+```
 git clone --depth 1 https://github.com/espressif/arduino-esp32 -b idf-release/v5.1 lcd-hd44780-hello-world/components/arduino
+```
+This install `arduino-esp32` for esp-idf v5.1. Adjust the version in the command above if you use a different esp-idf version (`-b idf-release/v5.1`)
+
+You can now build & flash:
+```
 cd lcd-hd44780-hello-world
-. $IDF_PATH/export.sh
-
 idf.py build
-
-idf.py -p /dev/tty.SLAB_USBtoUART flash
-
 ```
 
 # Wiring

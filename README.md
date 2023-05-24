@@ -21,6 +21,7 @@ Edit dependencies in `main/idf_component.yml`:
  espressif/arduino-esp32: "*"
  # espressif/mdns: "*"
 ```
+in `main/idf_component.yml`.
 
 Then download the `idf-release/v5.1` branch of arduino-esp32:
 ```

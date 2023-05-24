@@ -6,25 +6,26 @@ Display back-light will blink.
 
 It uses the esp-idf toolchain with Arduino component and [Arduino-LiquidCrystal-I2C-library](https://github.com/fdebrabander/Arduino-LiquidCrystal-I2C-library).
 
-# Building
+# Building with ESP-IDF v4.4
 
-Download this repository
 ```
 git clone --recursive https://github.com/fl4p/lcd-hd44780-hello-world
+cd lcd-hd44780-hello-world
+idf.py build
 ```
 
-Then download the arduino component with the following command **if you're using ESP-IDF 5.1**:
+# Building with ESP-IDF v5.1
+
+Remove line 
 ```
+ espressif/arduino-esp32: "*"
+```
+in `main/idf_component.yml`.
+
+Then download the `idf-release/v5.1` branch of arduino-esp32:
+```
+
 git clone --depth 1 https://github.com/espressif/arduino-esp32 -b idf-release/v5.1 lcd-hd44780-hello-world/components/arduino
-```
-
-If you are using ESP-IDF versions between 4.4.0 and 4.4.99, run the following command instead:
-```
-git clone --depth 1 https://github.com/espressif/arduino-esp32 lcd-hd44780-hello-world/components/arduino
-```
-
-You can now build & flash:
-```
 cd lcd-hd44780-hello-world
 idf.py build
 ```
